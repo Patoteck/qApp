@@ -26,16 +26,11 @@ workbox.core.setCacheNameDetails({prefix: "pwa-news"});
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
-workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
-
-workbox.core.skipWaiting();
-workbox.core.clientsClaim();
 
 workbox.routing.registerRoute(
   new RegExp('https://hacker-news.firebaseio.com'),
   new workbox.strategies.StaleWhileRevalidate()
 );
-
 
 self.addEventListener('push', (event) => {
   const title = 'Get Started With Workbox';
