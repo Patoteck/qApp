@@ -31,7 +31,7 @@ workbox.precaching.suppressWarnings();
   new RegExp('https://hacker-news.firebaseio.com'),
   new workbox.strategies.StaleWhileRevalidate()
 );
-
+*/
 self.addEventListener('push', (event) => {
   console.log("neeeeee entro aca me meu");
   const title = 'Get Started With Workbox';
@@ -40,7 +40,7 @@ self.addEventListener('push', (event) => {
   };
   event.waitUntil(self.registration.showNotification(title, options));
   
-});*/
+});
 
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
