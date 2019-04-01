@@ -45,7 +45,7 @@ self.addEventListener('push', e => {
         badge: 'img/favicon.ico',
         image: 'https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/5/5b/Torre_de_los_Avengers.png/revision/latest?cb=20150626220613&path-prefix=es',
         vibrate: [125,75,125,275,200,275,125,75,125,275,200,600,200,600],
-        openUrl: '/qApp/#/',
+        openUrl: '/qApp/#/'+data.usuario,
         data: {
             // url: 'https://google.com',
             url: '/qApp/#/news/',
