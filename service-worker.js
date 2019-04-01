@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.b5aeb4c8092fc57604e421d366fc8a74.js"
+  "precache-manifest.74fe3bbd345512e7d74f8f7bf0c53a3f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "pwa-news"});
@@ -26,28 +26,4 @@ workbox.core.setCacheNameDetails({prefix: "pwa-news"});
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
-self.addEventListener('push', (event) => {
-  console.log("neeeeee entro aca me meu");
-  const title = 'Get Started With Workbox';
-  const options = {
-    body: event.data.text()
-  };
-  event.waitUntil(self.registration.showNotification(title, options));
-
-});
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
-
-
-
-//
-// self.__precacheManifest = [].concat(self.__precacheManifest || []);
-// workbox.precaching.suppressWarnings();
-//
-// /*workbox.routing.registerRoute(
-//   new RegExp('https://hacker-news.firebaseio.com'),
-//   new workbox.strategies.StaleWhileRevalidate()
-// );
-// */
-//
-//
-// workbox.precaching.precacheAndRoute(self.__precacheManifest);
