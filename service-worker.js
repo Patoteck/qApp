@@ -48,7 +48,7 @@ self.addEventListener('push', e => {
         openUrl: '/qApp/#/',
         data: {
             // url: 'https://google.com',
-            url: '/qApp/#/',
+            url: '/qApp/#/news/',
             id: data.usuario
         },
         actions: [
