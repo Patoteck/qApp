@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.419bd2cb804dd3c8c3a0f35f2ba0dafd.js"
+  "precache-manifest.b5aeb4c8092fc57604e421d366fc8a74.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "pwa-news"});
@@ -26,12 +26,6 @@ workbox.core.setCacheNameDetails({prefix: "pwa-news"});
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
-
-/*workbox.routing.registerRoute(
-  new RegExp('https://hacker-news.firebaseio.com'),
-  new workbox.strategies.StaleWhileRevalidate()
-);
-*/
 self.addEventListener('push', (event) => {
   console.log("neeeeee entro aca me meu");
   const title = 'Get Started With Workbox';
@@ -39,8 +33,21 @@ self.addEventListener('push', (event) => {
     body: event.data.text()
   };
   event.waitUntil(self.registration.showNotification(title, options));
-  
+
 });
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 
-workbox.precaching.precacheAndRoute(self.__precacheManifest);
+
+//
+// self.__precacheManifest = [].concat(self.__precacheManifest || []);
+// workbox.precaching.suppressWarnings();
+//
+// /*workbox.routing.registerRoute(
+//   new RegExp('https://hacker-news.firebaseio.com'),
+//   new workbox.strategies.StaleWhileRevalidate()
+// );
+// */
+//
+//
+// workbox.precaching.precacheAndRoute(self.__precacheManifest);
