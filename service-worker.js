@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.c5662c151dec156abe156baba29a1303.js"
+  "precache-manifest.370ae9c76ccc80f7068e1aff33c542fa.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "pwa-news"});
@@ -43,7 +43,7 @@ self.addEventListener('push', e => {
         // icon: 'img/icons/icon-72x72.png',
         icon: `img/avatars/${ data.usuario }.jpg`,
         badge: 'img/favicon.ico',
-        image: 'https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/5/5b/Torre_de_los_Avengers.png/revision/latest?cb=20150626220613&path-prefix=es',
+        image: 'http://frontiniyasoc.com.ar/wp-content/uploads/2016/06/cropped-logonw.jpg',
         vibrate: [125,75,125,275,200,275,125,75,125,275,200,600,200,600],
         openUrl: '/qApp/#/news/'+data.usuario,
         data: {
@@ -54,13 +54,8 @@ self.addEventListener('push', e => {
         actions: [
             {
                 action: 'thor-action',
-                title: 'Thor',
+                title: 'Abrir',
                 icon: 'img/avatar/thor.jpg'
-            },
-            {
-                action: 'ironman-action',
-                title: 'Ironman',
-                icon: 'img/avatar/ironman.jpg'
             }
         ]
     };
